@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="container">
+            <!-- EDIT: Your name or initials -->
+            <a href="#hero" class="logo">YN</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-content">
+            <!-- EDIT: Replace with <img src="your-photo.jpg" alt="Your Name" class="hero-image"> -->
+            <div class="hero-image">👤</div>
+            <!-- EDIT: Your name and tagline -->
+            <div>
+                <h1>Hi, I'm Your Name</h1>
+                <p class="tagline">I design and build digital experiences that make people's lives easier and more enjoyable.</p>
+            </div>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <!-- EDIT: Your bio -->
+            <p>I'm a creative professional passionate about solving problems through design and technology. With a background in digital media and several years of hands-on experience, I've worked with startups and established companies to bring ideas to life.</p>
+            <p>When I'm not working, you'll find me exploring new coffee shops, hiking local trails, or diving into the latest design trends. I believe the best work happens when curiosity meets discipline.</p>
+            <p>Currently, I'm focused on projects that combine functionality with thoughtful user experience, always looking for ways to make technology more accessible and human.</p>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- EDIT: Your projects -->
+            <div class="project-card">
+                <h3>E-Commerce Redesign</h3>
+                <p>Redesigned the checkout flow for a retail brand, reducing cart abandonment by 35% and improving mobile conversion rates.</p>
+                <div class="project-tags">
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">Research</span>
+                    <span class="tag">Prototyping</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Community Platform</h3>
+                <p>Built a web platform connecting local volunteers with neighborhood projects, serving over 2,000 active users in six months.</p>
+                <div class="project-tags">
+                    <span class="tag">Full-Stack</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Brand Identity System</h3>
+                <p>Created a complete visual identity for a sustainable fashion startup, including logo, color system, and brand guidelines.</p>
+                <div class="project-tags">
+                    <span class="tag">Branding</span>
+                    <span class="tag">Design System</span>
+                    <span class="tag">Illustration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <!-- EDIT: Your skills organized by category -->
+            <div class="skill-category">
+                <h3>Design</h3>
+                <ul class="skill-list">
+                    <li>UI/UX Design</li>
+                    <li>Figma & Sketch</li>
+                    <li>Prototyping</li>
+                    <li>Design Systems</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Development</h3>
+                <ul class="skill-list">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React & Vue.js</li>
+                    <li>Responsive Design</li>
+                    <li>Git & Version Control</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Strategy</h3>
+                <ul class="skill-list">
+                    <li>User Research</li>
+                    <li>Project Management</li>
+                    <li>Brand Strategy</li>
+                    <li>Content Creation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Let's Work Together</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-message" id="formMessage"></div>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- EDIT: Add your social links or update the year -->
+        <p>&copy; 2024 Your Name. Built with care.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
