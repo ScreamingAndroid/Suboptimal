@@ -23,44 +23,44 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form submission with Formspree
+// Contact form submission with Formspree (compatible version)
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-contactForm.addEventListener('submit', async (e) => {
+contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
     formMessage.textContent = 'Sending...';
     formMessage.className = 'form-message';
     formMessage.style.display = 'block';
     
-    const formData = new FormData(contactForm);
+    var formData = new FormData(contactForm);
     
-    try {
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(function(response) {
         if (response.ok) {
             formMessage.textContent = 'Thanks for reaching out! I\'ll get back to you soon.';
             formMessage.className = 'form-message success';
             contactForm.reset();
             
-            setTimeout(() => {
+            setTimeout(function() {
                 formMessage.style.display = 'none';
             }, 5000);
         } else {
             formMessage.textContent = 'Oops! There was a problem. Please try again.';
             formMessage.className = 'form-message error';
         }
-    } catch (error) {
+    })
+    .catch(function(error) {
         formMessage.textContent = 'Oops! There was a problem. Please try again.';
         formMessage.className = 'form-message error';
-    }
+    });
 });
 
 // Smooth scroll with offset for fixed navbar
