@@ -23,32 +23,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form submission (demo - replace with your backend)
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // EDIT: Replace this with your actual form handling logic
-    // This is just a demo that shows a success message
-    
-    // Simulate form processing
-    formMessage.textContent = 'Sending...';
-    formMessage.className = 'form-message';
-    formMessage.style.display = 'block';
-    
-    setTimeout(() => {
-        formMessage.textContent = 'Thanks for reaching out! I\'ll get back to you soon.';
-        formMessage.className = 'form-message success';
-        contactForm.reset();
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    }, 1000);
-});
+<form
+  action="https://formspree.io/f/xeobvwqv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
 // Smooth scroll with offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
